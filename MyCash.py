@@ -67,6 +67,7 @@ while True:
         break
     elif choose == 99:
         # Ask for confirmation before resetting files
+        print('(!!WARNING. This will erase all activity and reset balance!!)')
         confirmation = input("Are you sure you want to reset the files? (y/n): ").lower()
         if confirmation == 'y':
             # Clear both files and set balance to 0.0
@@ -82,7 +83,13 @@ while True:
         print('first time using this program? Replace lines 7 & 8 with the correct paths to files insde the "[]" \n Replace [cash.txt file path] with the path to cash.txt file \n Replace [charges.txt file path] with the path to charges.txt file')
         print('!!!WARNING!!! files already exist in the program. It is in the same directory')
         print('Do not overwrite files. Use option 99 to reset files if needed')
-
+        print('---General instructions---')
+        print('press 1 to show your current balance')
+        print('press 2 to add cash')
+        print('press 3 to add expenses')
+        print('press 4 to show activity')
+        print('press 5 to exit')
+        print('press 99 to reset files (!!WARNING. This will erase all activity and reset balance!!)')
     else:
         print("Invalid option. Please choose a valid option.")
     
