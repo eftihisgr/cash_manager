@@ -29,7 +29,7 @@ while True:
     print('(4) SHOW ACTIVITY')
     print('(33) HELP')
     print('(5) EXIT')
-    print('(11) Creator credits')
+    
     
     
     
@@ -77,8 +77,6 @@ while True:
             print("Files cleared. Balance set to 0.0.")
         else:
             print("Reset canceled.")
-    elif choose == 11:
-        print('Creator: Eftihis Papasifakis\nsocial links: https://instagram.com/eftihis06\nIn assistance with: ChatGPT 3.5')
         
     else:
         print("Invalid option. Please choose a valid option.")
