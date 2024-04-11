@@ -4,8 +4,8 @@ import os
 # Get the current date and time
 date = datetime.now()
 
-cash_file_path = 'D:\\V.S.code\\V.S.code\\python\\my python\\MyCash\\cash.txt'
-charges_file_path = 'D:\\V.S.code\\V.S.code\\python\\my python\\MyCash\\charges.txt'
+cash_file_path = '[cash.txt file path]'             
+charges_file_path = '[charges.txt file path]'
 
 # Open the cash file for reading and writing
 cash_file = open(cash_file_path, 'r+')
@@ -21,7 +21,8 @@ charges_file = open(charges_file_path, 'a')
 
 # Display options and process user input
 print("current date:", date.strftime("%Y-%m-%d %H:%M"))
-print('\n\nWELCOME TO MyCash APPLICATION\nPLEASE CHOOSE AN OPTION:')
+note = "\n\n**note: if this is the first time using this program, type 33 to get assistance**"
+print(note, '\n\nWELCOME TO MyCash APPLICATION\nPLEASE CHOOSE AN OPTION:')
 while True:
     print('(1) SHOW YOUR CURRENT BALANCE')
     print('(2) ADD CASH')
@@ -77,7 +78,11 @@ while True:
             print("Files cleared. Balance set to 0.0.")
         else:
             print("Reset canceled.")
-        
+    elif choose == 33:
+        print('first time using this program? Replace lines 7 & 8 with the correct paths to files insde the "[]" \n Replace [cash.txt file path] with the path to cash.txt file \n Replace [charges.txt file path] with the path to charges.txt file')
+        print('!!!WARNING!!! files already exist in the program. It is in the same directory')
+        print('Do not overwrite files. Use option 99 to reset files if needed')
+
     else:
         print("Invalid option. Please choose a valid option.")
     
