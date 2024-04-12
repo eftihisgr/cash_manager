@@ -1,11 +1,20 @@
+
 from datetime import datetime
 import os
 
 # Get the current date and time
 date = datetime.now()
 
-cash_file_path = '[cash.txt file path]'             
-charges_file_path = '[charges.txt file path]'
+# Get the current directory
+current_directory = os.path.dirname(__file__)
+
+# Define the file names
+cash_file_name = 'cash.txt'
+charges_file_name = 'charges.txt'
+
+# Form the full file paths
+cash_file_path = os.path.join(current_directory, cash_file_name)
+charges_file_path = os.path.join(current_directory, charges_file_name)
 
 # Open the cash file for reading and writing
 cash_file = open(cash_file_path, 'r+')
@@ -29,6 +38,7 @@ while True:
     print('(3) ADD EXPENSES')
     print('(4) SHOW ACTIVITY')
     print('(33) HELP')
+    print('(99) RESET ALL')
     print('(5) EXIT')
     
     
@@ -80,15 +90,12 @@ while True:
         else:
             print("Reset canceled.")
     elif choose == 33:
-        print('first time using this program? Replace lines 7 & 8 with the correct paths to files insde the "[]" \n Replace [cash.txt file path] with the path to cash.txt file \n Replace [charges.txt file path] with the path to charges.txt file')
-        print('!!!WARNING!!! files already exist in the program. It is in the same directory')
-        print('Do not overwrite files. Use option 99 to reset files if needed')
         print('\n\n\n---General instructions---')
         print('\nThis is a python script which help you manage and track your own finance. It is not automated to trace the user itsleft so, the user needs to change its values.' )
         print('The menu has all the nessesary options such add value or subtrack (which will require a reason). also all the activity is saved to charges.txt in the same directory and the user have the option to show it all.')
         print('The balance is auto changed to cash.txt file. Lastly, the user has the option to reset all the files so its like new. All the activity is saved so the user dont have to worry about saving it or losing its balance')
         print('!!!WARNING!!!')
-        print('Do not change any of the files by yourself. The program is able to make any nesecary changes. If you edit the files, the programm will crash. \n\n\n')
+        print('Do not change/edit any of the files by yourself. The program is able to make any nesecary changes. If you edit the files, the program will crash. \n')
         print('press 1 to show your current balance')
         print('press 2 to add cash')
         print('press 3 to add expenses')
