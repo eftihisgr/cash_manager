@@ -29,8 +29,7 @@ charges_file = open(charges_file_path, 'a')
 
 # Display options and process user input
 print("current date:", date.strftime("%Y-%m-%d %H:%M"))
-note = "\n\n**note: if this is the first time using this program, type 33 to get assistance**"
-print(note, '\n\nWELCOME TO MyCash APPLICATION\nPLEASE CHOOSE AN OPTION:')
+print('\n\nWELCOME TO MyCash APPLICATION\nPLEASE CHOOSE AN OPTION:')
 while True:
     print('(1) SHOW YOUR CURRENT BALANCE')
     print('(2) ADD CASH')
